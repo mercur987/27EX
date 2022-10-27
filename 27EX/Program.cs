@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 public class Test
 {
 	public static void Main()
@@ -59,11 +59,11 @@ public class Cylinder
 	}
 	public float GetSurface()
 	{
-		return (float)(2 * radius * Math.PI * (height * radius));
+		return (float)(2 * Math.PI * radius * radius + 2 * Math.PI * height * radius);
 	}
-	public float GetVolume()
+	public float GetVolume()//
 	{
-		return (float)(radius * Math.PI * height);
+		return (float)(radius * radius * Math.PI * height);
 	}
 }
 public class Sphere
@@ -75,11 +75,11 @@ public class Sphere
 	}
 	public float GetSurface()
 	{
-		return (float)(4 * radius * Math.PI);
+		return (float)(4 * radius *radius * Math.PI );//
 	}
 	public float GetVolume()
 	{
-		return (float)(4 / 3 * Math.PI * radius * radius * radius);
+		return (float)(4 * Math.PI * radius * radius * radius /3);
 	}
 }
 public class TriangularPrism
